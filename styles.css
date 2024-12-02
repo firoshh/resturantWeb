@@ -1,0 +1,746 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #886767; /* Updated background color */
+}
+
+header {
+    background-color: #573c3c;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 15px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #575757;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Hide slides by default */
+.mySlides {
+    display: none;
+}
+
+/* Style for images */
+.mySlides img {
+    width: 100%;
+    height: auto;
+    max-height: 700px; /* Adjust based on your preference */
+    object-fit: cover; /* Ensures images cover the container without distortion */
+}
+
+/* Navigation buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    transition: opacity 0.5s ease, background-color 0.6s ease;
+    transform: translateY(-50%);
+    opacity: 0.3; /* More transparent by default */
+}
+
+.next {
+    right: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+    opacity: 1; /* Fully visible on hover */
+}
+
+
+
+/* Fade effect for slides */
+.fade {
+    animation: fade 2.5s ease-in-out;
+}
+
+@keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
+}
+
+/* Ensure the body or a parent container has position: relative; */
+body {
+    position: relative;
+}
+
+/* Welcome Message */
+.welcome {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1; /* Ensure it is above the slideshow */
+}
+
+.welcome h1 {
+    font-size: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
+}
+
+.welcome p {
+    font-size: 23px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
+}
+/* See the Menu Button */
+.see-menu-button {
+    display: inline-block;
+    margin-top: 20px; /* Space between the paragraph and button */
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #a78b8b; /* Button background color */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.see-menu-button:hover {
+    background-color: #575757; /* Darker button background on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+
+/* Forms */
+form {
+    background-color: #e6dbdb;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #575757;
+}
+
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow for rounded corners */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+table, th, td {
+    border: 1px solid #e6dbdb; /* Modern border color */
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+td {
+    background-color: #c29c9c;
+}
+
+tr:nth-child(even) {
+    background-color: #1d1c1c; /* Alternate row color for better readability */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Highlight row on hover */
+}
+
+
+/* Menu items */
+.menu-item {
+    border: 2px solid #2e2d2d; /* Darker border color */
+    margin: 15px;
+    padding: 15px;
+    width: 220px; /* Slightly larger width for better layout */
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    border-radius: 20px; /* Rounded corners for a modern look */
+    background-color: #e6dbdb; /* Light background for contrast */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* More pronounced shadow for depth */
+    transition: transform 0.3s, box-shadow 0.4s; /* Smooth transition for hover effects */
+}
+
+.menu-item:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.5); /* Darker shadow on hover for greater emphasis */
+}
+
+.menu-item img {
+    width: 100px; /* Larger image for better visibility */
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px; /* Rounded corners for the image */
+}
+
+.menu-item h3 {
+    margin: 10px 0;
+    font-size: 18px; /* Slightly larger font for the title */
+}
+
+.menu-item p {
+    margin: 5px 0;
+    font-size: 14px; /* Adjusted font size for better readability */
+    color: #666; /* Slightly darker text for better contrast */
+}
+
+
+/* Button */
+.menu-item .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #333; /* Dark background for button */
+    border: none;
+    border-radius: 5px; /* Rounded corners for the button */
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+.menu-item .btn:hover {
+    background-color: #575757; /* Slightly lighter background on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px; /* Padding around the container */
+}
+
+/* General styles for the cart container */
+/* General body styling */
+/* General body styling */
+
+
+/* Container for the cart items and summary */
+.cart-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #c2aaaa;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding-bottom: 100px; /* Extra padding at the bottom for the cart summary */
+    min-height: calc(100vh - 60px); /* Ensure minimum height to push the footer down */
+}
+
+/* Styling for each cart item */
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+/* Image styling */
+.cart-item img {
+    max-width: 100px;
+    margin-right: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Details of the cart item */
+.cart-item-details {
+    flex: 1;
+}
+
+/* Title of the cart item */
+.cart-item-details h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #000000;
+}
+
+/* Description and price of the cart item */
+.cart-item-details p {
+    margin: 5px 0;
+    font-size: 1.1em;
+    color: #363636;
+}
+
+/* Form styling within cart items */
+.cart-item-details form {
+    margin: 10px 0;
+}
+
+/* Input fields styling */
+.cart-item-details input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    text-align: center;
+}
+
+/* Summary section styling */
+.cart-summary {
+    border-top: 2px solid #333;
+    padding-top: 20px;
+    text-align: right;
+    background: #c29c9c;
+    margin-top: 20px; /* Ensure it's visually separated */
+}
+
+/* Summary text styling */
+.cart-summary p {
+    font-size: 1.8em;
+    color: #333;
+    margin: 0;
+}
+
+/* Button styling */
+.btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.btn:hover {
+    background-color: #555;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #573c3c;
+    color: #fff;
+    margin-top: 20px;
+    width: 100%;
+    clear: both;
+}
+
+
+/* General Dashboard Styles */
+.dashboard-section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #e6dbdb; /* Match form background */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Section Headers */
+.dashboard-section h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Forms */
+form {
+    background-color: #e6dbdb;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="submit"],
+form input[type="submit"],
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #575757;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+table, th, td {
+    border: 1px solid #e6dbdb;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+td {
+    background-color: #c29c9c;
+}
+
+tr:nth-child(even) {
+    background-color: #1d1c1c;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #e2baba;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #575757;
+    transform: translateY(-2px);
+}
+/* Promotions Page Styles */
+
+/* Main Section */
+main {
+    padding: 20px;
+}
+
+/* Container for Promotions */
+.promotions-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #e6dbdb; /* Light background for contrast */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Title of the Promotions Page */
+main h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Section Title */
+main h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* List of Promotions */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    border: 2px solid #2e2d2d; /* Darker border color */
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 10px; /* Rounded corners for a modern look */
+    background-color: #e6dbdb; /* Light background for contrast */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* More pronounced shadow for depth */
+    transition: transform 0.3s, box-shadow 0.4s; /* Smooth transition for hover effects */
+}
+
+li:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.5); /* Darker shadow on hover for greater emphasis */
+}
+
+/* Promotion Image */
+li img {
+    width: 100%;
+    max-width: 400px; /* Adjust as needed */
+    height: auto;
+    border-radius: 8px; /* Rounded corners for the image */
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Promotion Title */
+li h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Promotion Description */
+li p {
+    margin: 5px 0;
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Promotion Dates */
+li .promotion-dates {
+    font-size: 1em;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Featured Menu Items */
+.featured-menu {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background color */
+}
+
+.featured-menu h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.featured-items-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.featured-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    width: 30%; /* Adjust width as needed */
+    box-sizing: border-box;
+}
+
+.featured-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.featured-item h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.featured-item p {
+    color: #666;
+    font-size: 1em;
+}
+
+footer p a {
+    color: white !important; /* Force the link color to white */
+    text-decoration: none; /* Remove underline */
+}
+
+footer p a:hover {
+    text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+/* Contact Form */
+.contact-form {
+    margin-bottom: 40px;
+}
+
+.contact-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+/* Restaurant Contact Information */
+.contact-info {
+    margin-bottom: 40px;
+}
+
+.contact-info h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Location Map */
+.location-map iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 8px;
+}
+
+.location-map h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
